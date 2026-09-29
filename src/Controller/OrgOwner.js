@@ -144,7 +144,7 @@ const createAdmin = async (req, res) => {
         password: HashPass,
         role: "admin",
         isActive: OrgDetail.isActive,
-        orgination: OrgDetail._id
+        organization: OrgDetail._id
     })
     console.log('id', id)
 

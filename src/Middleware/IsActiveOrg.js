@@ -2,7 +2,9 @@ const { AppError } = require("../Utils/AppError")
 
 
 const IsActiveOrg = (req, res, next) => {
-
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    console.log("req.User.organization.isActive",req.User)
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     if (req.User.role == "owner") {
         next()
     }

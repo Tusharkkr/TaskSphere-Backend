@@ -5,6 +5,7 @@ const { AddOwner } = require('./Utils/AddUser')
 const { UserRouter } = require('./Routers/UserRoutes')
 const { OrgRouter } = require('./Routers/OrgRouter')
 const { TeamRouter } = require('./Routers/TeamRouter')
+const { EmployeeRouter } = require('./Routers/EmployeeRouter')
 const cp = require("cookie-parser");
 
 let app = express()
@@ -13,7 +14,7 @@ app.use(express.json())
 app.use('/api/users',UserRouter)
 app.use('/api/org',OrgRouter)
 app.use('/api/team',TeamRouter)
-
+app.use('/api/employee',EmployeeRouter)
 
 
 mongoose.connect(process.env.DB_URI)

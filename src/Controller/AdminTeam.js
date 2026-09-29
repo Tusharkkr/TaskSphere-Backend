@@ -16,10 +16,13 @@ const createTeam = async (req, res) => {
         throw new AppError(400, "Invalid Name")
     }
 
+    console.log("Created___Team /line_19",name)
+
     const created = await Team.create({
         name,
         admin: req.User._id,
-        organization: req.User.organization._id
+        organization: req.User.organization._id,
+        isActive: req.User.organization.isActive
     })
 
     res.status(200).json({
